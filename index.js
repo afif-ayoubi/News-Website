@@ -3,11 +3,11 @@ const getAllNews = () => {
       url: "http://localhost/news%20website/backend/get_news.php",
       method: "GET",
       dataType: "json",
-      success: function(response) {
+      success: (response)=> {
         const newsDataArr = response.news;
         displayNews(newsDataArr);
       },
-      error: function(xhr, status, error) {
+      error: (xhr, status, error)=> {
         console.error(error);
       }
     });
